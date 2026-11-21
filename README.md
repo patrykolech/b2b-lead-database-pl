@@ -1,4 +1,4 @@
-# Baza firm z całej Polski z kontaktem e-mail — case study
+# Baza firm z całej Polski z kontaktem e-mail: case study
 
 **Lead generation B2B: rejestry firm + Google Maps + strony www → gotowa baza do sprzedaży.**
 Python · Playwright · openpyxl · CEIDG · KRS / rejestr.io · 2captcha
@@ -18,7 +18,7 @@ Python · Playwright · openpyxl · CEIDG · KRS / rejestr.io · 2captcha
 | Domen, z których pozyskano e-mail | **931** |
 | Strony blokujące automat (403/404, bot-protection), oznaczone osobnym statusem | **392** |
 | Skuteczność: strony www, które oddały e-mail | **ok. 70%** |
-| Czas realizacji | **3–4 dni** |
+| Czas realizacji | **3-4 dni** |
 
 ## Problem
 
@@ -43,17 +43,17 @@ flowchart LR
 1. **Zebranie firm z trzech źródeł.**
    JDG z CEIDG po kodach PKD branży (produkcja i hurt biżuterii, detal, naprawa zegarków), spółki z KRS / rejestr.io, a z Google Maps wyszukiwanie branży w każdej miejscowości w Polsce powyżej 1 000 mieszkańców. Dzięki temu w bazie są też firmy niewidoczne w Google i firmy widoczne w Google, ale zarejestrowane pod innym PKD.
 
-2. **Łączenie rekordów** — [`rejestry_i_google/polacz_gmaps_z_ceidg.py`](rejestry_i_google/polacz_gmaps_z_ceidg.py).
+2. **Łączenie rekordów**: [`rejestry_i_google/polacz_gmaps_z_ceidg.py`](rejestry_i_google/polacz_gmaps_z_ceidg.py).
    Kluczem jest ciąg „nazwa firmy + adres” użyty do wyszukania. Gdy Google zwraca kilka wyników, wybieram najlepszego kandydata punktowo:
    kategoria Google (jubilerska > zegarmistrzowska > ogólna), zgodność adresu (kod pocztowy, numer budynku, ulica), podobieństwo nazwy do nazwy z rejestru.
 
-3. **Jedna baza JDG + spółki** — [`rejestry_i_google/zbuduj_baze_zbiorcza.py`](rejestry_i_google/zbuduj_baze_zbiorcza.py).
+3. **Jedna baza JDG + spółki**: [`rejestry_i_google/zbuduj_baze_zbiorcza.py`](rejestry_i_google/zbuduj_baze_zbiorcza.py).
    Oba typy podmiotów w jednym arkuszu z kolumną „Typ podmiotu”, z weryfikacją, czy dane z rejestru zgadzają się z tym, co pokazuje Google.
 
-4. **Filtr branży** — [`rejestry_i_google/filtruj_branze_jubilerska.py`](rejestry_i_google/filtruj_branze_jubilerska.py).
+4. **Filtr branży**: [`rejestry_i_google/filtruj_branze_jubilerska.py`](rejestry_i_google/filtruj_branze_jubilerska.py).
    Firma trafia do wyniku na podstawie trzech niezależnych sygnałów: kategorii z Google Maps (najmocniejszy dowód realnej działalności), kodu lub opisu PKD i słów w nazwie („jubiler”, „złotnik”, „biżuteria”…). Każda firma dostaje segment: jubiler / złotnik, sklep, producent, sprzedaż online, zegarmistrz. Odrzucone firmy zostają w osobnym arkuszu, żeby klient widział, co i dlaczego wypadło.
 
-5. **E-maile** — [`wizytowki_i_maile/`](wizytowki_i_maile/).
+5. **E-maile**: [`wizytowki_i_maile/`](wizytowki_i_maile/).
    Dwa źródła: kontakty zebrane ze stron firmowych (eksport narzędzia scrapującego strony, łączony z bazą po adresie www) oraz własny [`email_finder.py`](wizytowki_i_maile/email_finder.py), który dla każdej domeny szuka adresu w wynikach Google. Najważniejsze reguły wyboru adresu, które wyszły w praktyce:
    - adres w domenie firmy ma pierwszeństwo przed adresami z innych domen,
    - odrzucane są adresy z szablonów (`mail@domain.com`, `jan.kowalski@email.pl`), adresy hostingów i agencji robiących strony, adresy techniczne oraz „adresy”, które są nazwami grafik (`logo@2x.png`),
@@ -73,7 +73,7 @@ flowchart LR
 ```
 rejestry_i_google/     łączenie CEIDG, KRS / rejestr.io i Google Maps, filtr branży
 wizytowki_i_maile/     scraper wizytówek Google (Playwright) + wyszukiwanie e-maili + obsługa captchy
-data/                  miejsce na pliki wejściowe (puste — dane klienta nie są publikowane)
+data/                  miejsce na pliki wejściowe (puste: dane klienta nie są publikowane)
 ```
 
 ## Uruchomienie
@@ -100,4 +100,4 @@ Skrypty z `rejestry_i_google/` czytają eksporty z rejestrów i narzędzi scrapu
 
 ---
 
-**Autor:** Patryk Olech — AI Automation & GTM Engineer · [CV i inne projekty](https://github.com/patrykolech)
+**Autor:** Patryk Olech: AI Automation & GTM Engineer · [CV i inne projekty](https://github.com/patrykolech)
