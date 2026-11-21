@@ -100,4 +100,4 @@ Skrypty z `rejestry_i_google/` czytają eksporty z rejestrów i narzędzi scrapu
 
 ---
 
-**Autor:** Patryk Olech: AI Automation & GTM Engineer · [CV i inne projekty](https://github.com/patrykolech)
+**Autor:** Patryk Olech, AI Automation & GTM Engineer · [CV i inne projekty](https://github.com/patrykolech)
