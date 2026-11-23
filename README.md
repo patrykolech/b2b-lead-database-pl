@@ -98,7 +98,6 @@ Skrypty z `rejestry_i_google/` czytają eksporty z rejestrów i narzędzi scrapu
 
 - Repozytorium nie zawiera danych klienta ani danych firm, tylko kod.
 - Projekt dotyczy danych firmowych (B2B) z publicznych rejestrów i wizytówek. Przy wysyłce ofert do JDG trzeba pamiętać o obowiązku informacyjnym z RODO (art. 14).
-- Kod powstał z pomocą asystentów AI (Claude Code); architektura, reguły jakości danych i testy na prawdziwych danych są moje.
 
 ---
 
