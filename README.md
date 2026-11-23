@@ -1,6 +1,6 @@
 # Baza firm z całej Polski z kontaktem e-mail: case study
 
-> **TL;DR (EN):** Case study: a complete database of jewellery businesses in Poland (~6,700 companies) with emails, built by merging public registries (CEIDG, KRS / rejestr.io) with Google Maps, filtering by industry signals and extracting emails from company websites. Delivered in 3-4 days.
+> **TL;DR (EN):** Case study: a complete database of jewellery businesses in Poland (~6,700 companies) with emails, built by merging public registries (CEIDG, KRS / rejestr.io) with Google Maps, filtering by industry signals and extracting emails from company websites. Delivered in 3-4 days, on top of my own continuously updated database of all Polish sole proprietorships (CEIDG) and companies (KRS).
 
 **Lead generation B2B: rejestry firm + Google Maps + strony www → gotowa baza do sprzedaży.**
 Python · Playwright · openpyxl · CEIDG · KRS / rejestr.io · 2captcha
@@ -21,6 +21,17 @@ Python · Playwright · openpyxl · CEIDG · KRS / rejestr.io · 2captcha
 | Strony blokujące automat (403/404, bot-protection), oznaczone osobnym statusem | **392** |
 | Skuteczność: strony www, które oddały e-mail | **ok. 70%** |
 | Czas realizacji | **3-4 dni** |
+
+## Własna baza firm w Polsce
+
+Na co dzień pracuję na własnej, prywatnie zbudowanej bazie:
+
+- **pełny rejestr CEIDG**: wszystkie jednoosobowe działalności gospodarcze w Polsce,
+- **baza spółek z KRS** (przez rejestr.io),
+- **aktualizacja na bieżąco**: nowe wpisy, zmiany statusu, zawieszenia i zamknięcia działalności,
+- **dane kontaktowe** dołączane ze stron www i wizytówek Google, z deduplikacją po NIP.
+
+Dzięki temu zlecenie typu „wszystkie firmy z branży X w Polsce” zaczyna się od zapytania do bazy (PKD, region, data założenia, forma prawna), a scraping uzupełnia tylko brakujące kontakty. Baza jest prywatna i nie jest częścią repozytorium.
 
 ## Problem
 
