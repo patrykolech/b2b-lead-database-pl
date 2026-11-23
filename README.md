@@ -1,5 +1,7 @@
 # Baza firm z całej Polski z kontaktem e-mail: case study
 
+> **TL;DR (EN):** Case study: a complete database of jewellery businesses in Poland (~6,700 companies) with emails, built by merging public registries (CEIDG, KRS / rejestr.io) with Google Maps, filtering by industry signals and extracting emails from company websites. Delivered in 3-4 days.
+
 **Lead generation B2B: rejestry firm + Google Maps + strony www → gotowa baza do sprzedaży.**
 Python · Playwright · openpyxl · CEIDG · KRS / rejestr.io · 2captcha
 
